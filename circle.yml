@@ -1,0 +1,22 @@
+machine:
+  ruby:
+    version: 2.3.3 
+
+dependencies:
+  pre:
+    - gem update --system
+    - gem update --remote bundler
+    
+  override:
+    - bundle install
+     
+test:
+  override:
+    - bash publish.sh
+    
+general:
+  branches:
+    only:
+     - blog
+
+
